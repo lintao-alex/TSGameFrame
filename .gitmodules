@@ -1,0 +1,3 @@
+[submodule "TsCommon"]
+	path = TsCommon
+	url = git@github.com:lintao-alex/TsCommon.git
