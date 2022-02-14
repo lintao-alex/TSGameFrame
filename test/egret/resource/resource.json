@@ -1,0 +1,15 @@
+{
+  "groups":[
+    {"keys":"student_bin,student_atlas0",
+      "name":"student"}
+  ],
+  "resources": [{
+    "name": "student_bin",
+    "type": "bin",
+    "url": "student.bin"
+    },{
+    "name": "student_atlas0",
+    "type": "image",
+    "url": "student_atlas0.png"
+  }]
+}
