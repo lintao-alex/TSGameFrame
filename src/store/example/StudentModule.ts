@@ -5,6 +5,7 @@ export interface IStudentData {
     id: number;
     name: string;
     lv: number;
+    quality: number;
 }
 
 const STUDENT_LIST: IStudentData[] = []
@@ -14,6 +15,7 @@ function init() {
         id: 1,
         name: "Mike",
         lv: 1,
+        quality: 1,
     }
     STUDENT_LIST.push(createReactData(student))
 }
@@ -24,7 +26,12 @@ export function getStudent(): Readonly<IStudentData> {
 
 export function requestUpLv() {
     let student = STUDENT_LIST[0]
-    getWaitPms(1000).then(()=>{
-        student.lv++
-    })
+    student.lv++
+    return getWaitPms(100)
+}
+
+export function requestUpQuality(sync=false) {
+    let student = STUDENT_LIST[0]
+    student.quality++
+    return getWaitPms(100)
 }
